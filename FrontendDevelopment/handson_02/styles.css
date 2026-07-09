@@ -1,0 +1,170 @@
+/* Reset */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Body */
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Header */
+
+header{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    background:#004080;
+    color:white;
+    padding:20px;
+}
+
+.logo{
+    font-size:clamp(1.5rem,3vw,2.5rem);
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* Hero */
+
+#hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    min-height:40vh;
+    padding:40px 20px;
+    background:#EAF3FF;
+}
+
+#hero h1{
+    margin-bottom:20px;
+}
+
+#hero p{
+    margin-bottom:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    background:#007BFF;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+/* Stats */
+
+#stats{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:30px;
+}
+
+.stat{
+    background:white;
+    text-align:center;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    flex:1;
+}
+
+/* Courses */
+
+#courses{
+    padding:40px 20px;
+}
+
+.course-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.course-card{
+    border:1px solid #ccc;
+    border-radius:8px;
+    padding:20px;
+    min-height:220px;
+    align-self:stretch;
+    box-shadow:0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Footer */
+
+footer{
+    background:#004080;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+/* Tablet */
+
+@media (min-width:768px){
+
+header{
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+nav ul{
+    flex-direction:row;
+}
+
+#stats{
+    flex-direction:row;
+}
+
+.course-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/* Desktop */
+
+@media (min-width:1024px){
+
+#hero{
+    padding:80px;
+}
+
+.course-grid{
+    grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+/* Auto Responsive Grid */
+
+.course-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
