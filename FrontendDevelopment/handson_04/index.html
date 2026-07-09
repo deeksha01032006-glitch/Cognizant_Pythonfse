@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Portal</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<h1 class="logo">Student Portal</h1>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Courses</a></li>
+
+<li><a href="#">Profile</a></li>
+
+<li><a href="#">Notifications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section id="hero">
+
+<h2>Student Dashboard</h2>
+
+<p>Learning Async JavaScript & API Integration</p>
+
+</section>
+
+<section id="courses">
+
+<h2>Courses</h2>
+
+<p id="loading">Loading courses...</p>
+
+<div class="course-grid"></div>
+
+</section>
+
+<section id="notifications">
+
+<h2>Notifications</h2>
+
+<div id="spinner"></div>
+
+<div id="posts"></div>
+
+<div id="error-message"></div>
+
+<button id="retry-btn" style="display:none">
+Retry
+</button>
+
+</section>
+
+<footer>
+
+<p>© 2026 Student Portal</p>
+
+</footer>
+
+<!-- Axios CDN -->
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script type="module" src="app.js"></script>
+
+</body>
+
+</html>
