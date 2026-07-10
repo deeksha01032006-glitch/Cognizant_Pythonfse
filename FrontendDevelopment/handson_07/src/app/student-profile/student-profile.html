@@ -1,0 +1,76 @@
+<h2>Student Profile</h2>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+  <!-- Name -->
+  <div>
+    <label>Name</label><br>
+    <input type="text" formControlName="name">
+
+    <div style="color:red"
+      *ngIf="profileForm.get('name')?.touched && profileForm.get('name')?.invalid">
+
+      <small *ngIf="profileForm.get('name')?.errors?.['required']">
+        Name is required.
+      </small>
+
+      <small *ngIf="profileForm.get('name')?.errors?.['minlength']">
+        Minimum 3 characters required.
+      </small>
+
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Email -->
+  <div>
+    <label>Email</label><br>
+    <input type="email" formControlName="email">
+
+    <div style="color:red"
+      *ngIf="profileForm.get('email')?.touched && profileForm.get('email')?.invalid">
+
+      <small *ngIf="profileForm.get('email')?.errors?.['required']">
+        Email is required.
+      </small>
+
+      <small *ngIf="profileForm.get('email')?.errors?.['email']">
+        Enter a valid email.
+      </small>
+
+    </div>
+  </div>
+
+  <br>
+
+  <!-- Age -->
+  <div>
+    <label>Age</label><br>
+    <input type="number" formControlName="age">
+
+    <div style="color:red"
+      *ngIf="profileForm.get('age')?.touched && profileForm.get('age')?.invalid">
+
+      <small *ngIf="profileForm.get('age')?.errors?.['required']">
+        Age is required.
+      </small>
+
+      <small *ngIf="profileForm.get('age')?.errors?.['min']">
+        Minimum age is 18.
+      </small>
+
+      <small *ngIf="profileForm.get('age')?.errors?.['max']">
+        Maximum age is 60.
+      </small>
+
+    </div>
+  </div>
+
+  <br>
+
+  <button type="submit" [disabled]="profileForm.invalid">
+    Submit
+  </button>
+
+</form>
