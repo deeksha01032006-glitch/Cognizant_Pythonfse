@@ -1,5 +1,5 @@
 {
-  "name": "handson_08",
+  "name": "handson_10",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,9 +10,7 @@
   },
   "dependencies": {
     "axios": "^1.18.1",
-    "pinia": "^3.0.4",
-    "vue": "^3.5.38",
-    "vue-router": "^5.1.0"
+    "vue": "^3.5.38"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.7",
